@@ -94,4 +94,22 @@ export const pageQuery = graphql`
 ```
 
 Run App: ```npm run develop```.
+
 Your site is now running at ```http://localhost:8000```.
+
+### [***Hugo***](https://gohugo.io/getting-started/quick-start/)
+
+1) Download the latest zipped Hugo executable from [***Hugo Releases***](https://github.com/gohugoio/hugo/releases).
+2) Extract all contents to your ```..\Hugo\bin folder```.
+3) In PowerShell or your preferred CLI, add the hugo.exe executable to your PATH by navigating to ```C:\Hugo\bin``` (or the location of your ```hugo.exe``` file) and use the command set ```PATH=%PATH%;C:\Hugo\bin```. If the hugo command does not work after a reboot, you may have to run the command prompt as administrator.
+
+```
+hugo new site quickstart
+
+cd quickstart
+
+```
+
+
+
+
