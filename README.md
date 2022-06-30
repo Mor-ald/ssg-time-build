@@ -23,7 +23,7 @@ All tests for the selected static site generators included the following conditi
 3) Each project was built individually, based on the provided documentation for each static site generator.
 4) The result of the test is generated static HTML pages from the content in the Markdown files, which can be accessed when the local server is started.
 
-Test results: 
+Test results: mor-ald.github.io/ssg-time-build/
 
 ## Install projects
 
