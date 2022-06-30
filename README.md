@@ -109,7 +109,14 @@ hugo new site quickstart
 cd quickstart
 
 ```
+4) Create a folder for static posts ```/public/posts```.
+5) Create a folder for files markdown ```/content```.
 
+```
+hugo -D
+
+hugo server -D
+```
 
 
 
