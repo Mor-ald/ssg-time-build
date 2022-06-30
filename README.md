@@ -23,9 +23,11 @@ All tests for the selected static site generators included the following conditi
 3) Each project was built individually, based on the provided documentation for each static site generator.
 4) The result of the test is generated static HTML pages from the content in the Markdown files, which can be accessed when the local server is started.
 
+Test results: 
+
 ## Install projects
 
-### [***Gatsby***](https://www.gatsbyjs.com/docs)
+### [**Gatsby**](https://www.gatsbyjs.com/docs)
 
 ```
 npm init gatsby
@@ -97,7 +99,7 @@ Run App: ```npm run develop```.
 
 Your site is now running at ```http://localhost:8000```.
 
-### [***Hugo***](https://gohugo.io/getting-started/quick-start/)
+### [**Hugo**](https://gohugo.io/getting-started/quick-start/)
 
 1) Download the latest zipped Hugo executable from [***Hugo Releases***](https://github.com/gohugoio/hugo/releases).
 2) Extract all contents to your ```..\Hugo\bin folder```.
@@ -107,16 +109,148 @@ Your site is now running at ```http://localhost:8000```.
 hugo new site quickstart
 
 cd quickstart
-
 ```
 4) Create a folder for static posts ```/public/posts```.
-5) Create a folder for files markdown ```/content```.
+5) Create a folder for markdown files ```/content```.
 
 ```
 hugo -D
-
+#or
 hugo server -D
 ```
 
+### [**Jekyll**](https://jekyllrb.com/docs/)
+
+1) Install [Ruby](https://www.ruby-lang.org/en/downloads/).
+2) Install [RubyGems](https://rubygems.org/pages/download).
+
+```
+gem install jekyll bundler
+
+jekyll new myblog
+
+cd myblog
+
+jekyll build
+```
+
+### [**Next.js**](https://nextjs.org/docs)
+
+```
+npx create-next-app --example blog-starter blog-starter-app
+# or
+yarn create next-app --example blog-starter blog-starter-app
+# or
+pnpm create next-app --example blog-starter blog-starter-app
+
+cd blog-starter-app
+```
+1) Create a folder for markdown files ```/_posts```.
+2) Code index.js file for our example file markdown:
+```
+import Container from '../components/container'
+import MoreStories from '../components/more-stories'
+import HeroPost from '../components/hero-post'
+import Intro from '../components/intro'
+import Layout from '../components/layout'
+import { getAllPosts } from '../lib/api'
+import Head from 'next/head'
+import { CMS_NAME } from '../lib/constants'
+
+export default function Index({ allPosts }) {
+  const heroPost = allPosts[0]
+  const morePosts = allPosts.slice(1)
+  return (
+    <>
+      <Layout>
+        <Head>
+          <title>Next.js Blog Example with {CMS_NAME}</title>
+        </Head>
+        <Container>
+          <Intro />
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              date={heroPost.date}
+              slug={heroPost.slug}
+            />
+          )}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        </Container>
+      </Layout>
+    </>
+  )
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ])
+
+  return {
+    props: { allPosts },
+  }
+}
+```
+3) Intsall library gnomon: ```npm install -g gnomon```.
+4) Run app:
+```
+npm run build | gnomon
+```
+
+### [**Nuxt.js**](https://nuxtjs.org/docs/get-started/installation)
+
+```
+npx create-nuxt-app <project-name>
+#or
+yarn create nuxt-app <project-name>
+
+cd <project-name>
+```
+
+1) Create a file ```/pages/blog/_slug.vue``` with this code:
+```
+<template>
+  <article>
+    <nuxt-content :document="article" />
+  </article>
+</template>
+
+<script>
+  export default {
+    async asyncData({ $content, params }) {
+      const article = await $content('articles', params.slug).fetch()
+
+      return { article }
+    }
+  }
+</script>
+```
+2) Create a folder ```/content/articles``` for markdown files.
+3) Intsall library gnomon: ```npm install -g gnomon```.
+4) Run app:
+```
+npm run build | gnomon
+```
+
+### [**Hexo**](https://hexo.io/ru/docs/)
 
 
+```
+npm install -g hexo-cli
+
+npm install -g gnomon
+
+hexo init <project-name>
+
+cd <project-name>
+
+npm install
+
+hexo generate | gnomon
+```
