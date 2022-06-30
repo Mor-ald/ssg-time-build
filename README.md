@@ -1,4 +1,4 @@
-# Build time of the Static Site Generators
+# Time build of the Static Site Generators
 
 For analyze build time from the official JAMstack website was selected six of the most popular tools:
 
