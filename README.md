@@ -1,6 +1,6 @@
 # Time build of the Static Site Generators
 
-For analyze build time from the official JAMstack website was selected six of the most popular tools:
+For analyze time build from the official JAMstack website was selected six of the most popular tools:
 
 1) [***Gatsby***](https://www.gatsbyjs.com/);
 2) [***Hugo***](https://gohugo.io/);
@@ -9,7 +9,7 @@ For analyze build time from the official JAMstack website was selected six of th
 5) [***Nuxt***](https://nuxtjs.org/);
 6) [***Hexo***](https://hexo.io/ru/);
 
-Tests for build time project were carried out sequentially on the same software and hardware:
+Tests for time build project were carried out sequentially on the same software and hardware:
 
 1) OS Windows 10.
 2) CPU Ryzen 7 5800x 8 cores 3800 GGz.
