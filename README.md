@@ -12,8 +12,8 @@ For analyze time build from the official JAMstack website was selected six of th
 Tests for time build project were carried out sequentially on the same software and hardware:
 
 1) OS Windows 10.
-2) CPU Ryzen 7 5800x 8 cores 3800 GGz.
-3) RAM Crucial DDR4 3200 MGz.
+2) CPU Ryzen 7 5800x 8 cores 3800 GHz.
+3) RAM Crucial DDR4 3200 MHz.
 4) Samsung SSD 3000 Mb/sec.
 
 All tests for the selected static site generators included the following conditions:
