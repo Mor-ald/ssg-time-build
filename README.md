@@ -1,4 +1,4 @@
-# Time build of the Static Site Generators
+# Time build of the Static Site Generators 30.06.2022
 
 For analyze time build from the official JAMstack website was selected six of the most popular tools:
 
