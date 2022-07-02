@@ -246,7 +246,7 @@ const firstChart = new Chart(
 
 const secondChart = new Chart(
     document.getElementById('secondChart'),
-    configFirstChart
+    configSecondChart
 );
 
 const thirdChart = new Chart(
