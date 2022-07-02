@@ -8,12 +8,12 @@
     <title>ssg-time-build</title>
 </head>
 <body>
-    <h1>Build time of the Static Site Generators</h1>
+    <h1>Time Build of the Static Site Generators</h1>
     <h3>Gatsby, Hugo, Jekyll, Next.js, Nuxt.js, Hexo</h3>
     
     <div class="content">
         <p>
-            For analyze build time from the 
+            For analyze time build from the 
             official JAMstack website was selected six of 
             the most popular tools:
         </p>
@@ -38,7 +38,7 @@
             </li>
         </ul>
         <p>
-            Tests for build time project were carried out sequentially
+            Tests were carried out sequentially
             on the same software and hardware:
         </p>
         <ul>
@@ -84,7 +84,7 @@
             </li>
         </ul>
     </div>
-    <h3>Build Time table</h3>
+    <h3>Time Build Table</h3>
     <table>
         <thead>
             <tr>
@@ -311,20 +311,17 @@
             </tr>
         </tbody>
     </table>
+
     <div class="container">
-        <h3>Build Time for 0 to 1000 pages</h3>
-        <canvas id="canvas1" width="700" height="350">
-            Извините, ваш браузер нет поддерживает&lt;canvas&gt; элемент.
-        </canvas>
-        <h3>Build Time for 1000 to 10000 pages</h3>
-        <canvas id="canvas2" width="700" height="400">
-            Извините, ваш браузер нет поддерживает&lt;canvas&gt; элемент.
-        </canvas>
-        <h3>Build Time for 1000 pages</h3>
-        <canvas id="canvas3" width="700" height="350">
-            Извините, ваш браузер нет поддерживает&lt;canvas&gt; элемент.
-        </canvas>
+        <h3>Time Build for 0 to 1000 pages</h3>
+        <canvas id="firstChart" width="700" height="500"></canvas>
+        <h3>Time Build for 1000 to 10000 pages</h3>
+        <canvas id="secondChart" width="700" height="500"></canvas>
+        <h3>Time Build for 1000 pages</h3>
+        <canvas id="thirdChart" width="700" height="500"></canvas>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
