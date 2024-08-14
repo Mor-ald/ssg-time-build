@@ -9,13 +9,6 @@ For analyze time build from the official JAMstack website was selected six of th
 5) [***Nuxt***](https://nuxtjs.org/);
 6) [***Hexo***](https://hexo.io/ru/);
 
-Tests for time build project were carried out sequentially on the same software and hardware:
-
-1) OS Windows 10.
-2) CPU Ryzen 7 5800x 8 cores 3800 GHz.
-3) RAM Crucial DDR4 3200 MHz.
-4) Samsung SSD 3000 Mb/sec.
-
 All tests for the selected static site generators included the following conditions:
 
 1) Markdown files were used as a data source for building static pages, containing several text blocks, headings, links and metadata, without the use of images ([***example file***](./textfile0.md)).
